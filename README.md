@@ -3,6 +3,9 @@ Example project for teaching good practices on documentation of python projects
 
 You may [clone / fork this project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to play with it or you can create a similar one from scratch.
 
+To build the docs in this project, use a venv with `sphinx` and `sphinx-autoapi` installed and run `sphinx-build -aE -b html docs/source/ docs/build/html`.
+
+Then you can browse them by pointing your browser to `docs/build/html/index.html`
 
 ## How to create a project like this one from scratch
 
