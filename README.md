@@ -1,6 +1,16 @@
 # howto-doc
 Example project for teaching good practices on documentation of python projects
 
+> **TLDR;** Build the docs with:
+> ```console
+> git clone https://github.com/cpascual/howto-doc.git
+> python -m venv venv
+> source ./venv/bin/activate
+> pip install sphinx sphinx-autoapi
+> sphinx-build -aE -b html docs/source/ docs/build/html
+> firefox docs/build/html/index.html
+> ```
+
 You may [clone / fork this project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to play with it or you can create a similar one from scratch.
 
 To build the docs in this project, use a venv with `sphinx` and `sphinx-autoapi` installed and run `sphinx-build -aE -b html docs/source/ docs/build/html`.
