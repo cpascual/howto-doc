@@ -190,8 +190,8 @@ Auto-generating browsable API docs from your code docstrings
 ------------------------------------------------------------
 
 If you want to autogenerate documentation from your docstrings, you may
-use the sphinx ``autoapi`` extension and **write your docstrings using
-valid reStructuredText**.
+use the `sphinx autoapi extension <https://pypi.org/project/sphinx-autoapi/>`__ 
+and **write your docstrings using valid reStructuredText**.
 
 Style and conventions in docstrings
 -----------------------------------
@@ -205,7 +205,7 @@ For a function/method I recommend the following template:
 
 .. code:: python
 
-   def <FunctionName>(<ParamName>: <ParamTypeHint>, ...): -> <ReturnTypeHint>
+   def <FunctionName>(<ParamName>: <ParamTypeHint>, ...) -> <ReturnTypeHint>:
        """<Short summary tile in imperative tense>.
 
        <Optional multi-line description, possibly with examples and cross-references>
