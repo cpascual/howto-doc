@@ -1,7 +1,18 @@
 # howto-doc
 Example project for teaching good practices on documentation of python projects
 
-> **TLDR;** Build the docs with:
+## Browse the project and the pre-built docs
+
+This project publishes its pre-built docs in: https://cpascual.github.io/howto-doc/
+
+You can see the project itself in : https://github.com/cpascual/howto-doc/
+
+## Build the docs yourself from a clone of this repo
+
+You may [clone / fork this project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and then build the docs with sphinx-build (I recommend using a fresh python virtual environment with `sphinx` and `sphinx-autoapi` installed).
+
+For example:
+
 > ```console
 > git clone https://github.com/cpascual/howto-doc.git
 > python -m venv venv
@@ -11,13 +22,8 @@ Example project for teaching good practices on documentation of python projects
 > firefox docs/build/html/index.html
 > ```
 
-You may [clone / fork this project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to play with it or you can create a similar one from scratch.
 
-To build the docs in this project, use a venv with `sphinx` and `sphinx-autoapi` installed and run `sphinx-build -aE -b html docs/source/ docs/build/html`.
-
-Then you can browse them by pointing your browser to `docs/build/html/index.html`
-
-## How to create a project like this one from scratch
+## Create a project like this one from scratch
 
 It is highly recommended to **start with a fresh venv**, created with e.g. conda or `python -m venv venv && source ./venv/bin/activate`)
 
