@@ -20,3 +20,28 @@ jobs:
           name: docs-html
           path: docs/build/html/
           retention-days: 7
+      # upload html to pages artifact (to be used by deploy-docs job below)
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs/build/html/
+
+  # Deploy docs to pages (see https://github.com/marketplace/actions/deploy-github-pages-site)
+  # WARNING: deploying to pages makes your page *public* even if your project is private
+  deploy-docs:
+    runs-on: ubuntu-latest
+    needs: build-docs
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
